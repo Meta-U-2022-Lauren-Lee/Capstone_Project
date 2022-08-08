@@ -1,6 +1,8 @@
 # Capstone_Project
 App Idea: An app where you can keep track/build a map of the hikes you’ve done and share with friends
 
+Deployed Site: https://gohike.netlify.app/
+
 Core Features
 - [x] The Home page shows about section, contact information, etc.
 - [x] On the Find Hikes page, a user can search for a hike by name, and when they click the search/submit button, all the hikes with a matching name will show up on the left sidebar along with a map that has markers corresponding to the hikes in the left sidebar. 
@@ -20,6 +22,7 @@ Stretch Features
 - [x] Live comments and live friend requests
 - [x] End to end automated testing - I created a dummy admin account, and wrote tests in Cypress that log in this user, test out the Feed page, look up hikes in the Find Hikes page, etc. Then, I wrote a testing script and used Github actions to install my app’s dependencies and run this testing script every time someone makes a push or pull request.
 - [x] Build unique custom animations - I animated a picture of a figure running that displays on the loading page as well as animated my logo to make it a sun rising above mountains
+- [x] Deploy site
 
 
 Complexity/Problems
