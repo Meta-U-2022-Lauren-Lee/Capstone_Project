@@ -61,7 +61,8 @@ router.post("/login", async (req, res) => {
       location: loginUser.location,
       posts: loginUser.posts,
     });
-  } catch {
+  } catch (err){
+  console.log(err)
     res.status(400).json({ msg: "Failed to login user" });
   }
 });
