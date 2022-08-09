@@ -20,7 +20,7 @@ router.post("/register", async (req, res) => {
   let username = infoUser.username;
   let password = infoUser.password;
   let email = infoUser.email;
-  let location = infoUser.location
+  let location = infoUser.location;
 
   // Creates new user by calling Authorization methods
   try {
@@ -53,16 +53,14 @@ router.post("/login", async (req, res) => {
   // Logs in user by calling Authorization methods
   try {
     let loginUser = await Authorization.loginUser(username, password);
-    res
-      .status(201)
-      .json({
-        username: username,
-        sessionToken: loginUser.sessionToken,
-        firstName: loginUser.firstName,
-        lastName: loginUser.lastName,
-        location: loginUser.location,
-        posts: loginUser.posts
-      });
+    res.status(201).json({
+      username: username,
+      sessionToken: loginUser.sessionToken,
+      firstName: loginUser.firstName,
+      lastName: loginUser.lastName,
+      location: loginUser.location,
+      posts: loginUser.posts,
+    });
   } catch {
     res.status(400).json({ msg: "Failed to login user" });
   }
