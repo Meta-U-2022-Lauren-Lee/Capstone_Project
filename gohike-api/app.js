@@ -28,6 +28,10 @@ const io = socketIo(server, {
   },
 });
 
+// Use cookies
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 // Routes to use for respective paths
 app.use("/authorization", authorization);
 app.use("/posts", posts);
