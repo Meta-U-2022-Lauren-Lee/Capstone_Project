@@ -40,7 +40,6 @@ app.use("/user", user);
 
 // Check server is working
 app.get("/", (req, res) => {
-  res.cookie("cookie", "works")
   res.status(200).send({ ping: "pong" });
 });
 
