@@ -49,6 +49,10 @@ export default function FindHikes({ transparent, setTransparent, currUser }) {
    * @type {Array<hike>}
    */
   const [searchInputResult, setSearchInputResult] = React.useState([]);
+  /**
+   * State var that holds added hike's trail type
+   */
+  const [trailType, setTrailType] = React.useState("")
 
   // Fetches data on a specific hike on every render
   React.useEffect(async () => {
@@ -98,6 +102,120 @@ export default function FindHikes({ transparent, setTransparent, currUser }) {
             );
           })}
         </GoogleMapReact>
+      </div>
+      <div className="create_hike">
+          <span>Don't see the hike you're looking for?</span>
+          <span>Add it here</span>
+      </div>
+      <div className="create_hike_popout">
+        <input
+            type="text"
+            className="trail_type"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="difficulty"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="trail_type"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="location"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="ascent"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="descent"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="high"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="low"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="longitude"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="latitude"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="condition_status"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
+        <input
+            type="text"
+            className="summary"
+            autoComplete="off"
+            onChange={(event) => setTrailType(event.target.value)}
+            placeholder="Trail Type"
+            value={trailType}
+            required
+        />
       </div>
     </nav>
   );
